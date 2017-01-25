@@ -17,11 +17,14 @@ class PillCountViewController: UIViewController {
     @IBOutlet weak var amountPatientShouldHaveLabel: UILabel!
 
     let datePicker = UIDatePicker()
+    var timer = Timer()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createDatePicker()
+        timer = Timer.scheduledTimer(timeInterval: 3600, target:self, selector: #selector(PillCountViewController.updateDaysCounterLabel), userInfo: nil, repeats: true)
     }
 
     func createDatePicker() {
@@ -52,10 +55,22 @@ class PillCountViewController: UIViewController {
         
         datePickerTextField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
+        updateDaysCounterLabel()
     }
     
     @IBAction func infoEnteredButtonPressed(_ sender: Any) {
     }
+    
+    
+    func updateDaysCounterLabel() {
+        let timeLeft = datePicker.date.timeIntervalSinceNow
+        daysUntilNextAppointmentLabel.text = timeLeft.time
+    }
 
 }
 
+extension TimeInterval {
+    var time:String {
+        return String(format:"%02d", Int((self/86400)))
+    }
+}
