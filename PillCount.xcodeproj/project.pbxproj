@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E02C5D2C1E38CC25005B614B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02C5D2B1E38CC25005B614B /* AppDelegate.swift */; };
-		E02C5D2E1E38CC25005B614B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02C5D2D1E38CC25005B614B /* ViewController.swift */; };
+		E02C5D2E1E38CC25005B614B /* PillCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02C5D2D1E38CC25005B614B /* PillCountViewController.swift */; };
 		E02C5D311E38CC25005B614B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02C5D2F1E38CC25005B614B /* Main.storyboard */; };
 		E02C5D341E38CC25005B614B /* PillCount.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E02C5D321E38CC25005B614B /* PillCount.xcdatamodeld */; };
 		E02C5D361E38CC25005B614B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02C5D351E38CC25005B614B /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		E02C5D281E38CC25005B614B /* PillCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02C5D2B1E38CC25005B614B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E02C5D2D1E38CC25005B614B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E02C5D2D1E38CC25005B614B /* PillCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillCountViewController.swift; sourceTree = "<group>"; };
 		E02C5D301E38CC25005B614B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E02C5D331E38CC25005B614B /* PillCount.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PillCount.xcdatamodel; sourceTree = "<group>"; };
 		E02C5D351E38CC25005B614B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E02C5D2B1E38CC25005B614B /* AppDelegate.swift */,
-				E02C5D2D1E38CC25005B614B /* ViewController.swift */,
+				E02C5D2D1E38CC25005B614B /* PillCountViewController.swift */,
 				E02C5D2F1E38CC25005B614B /* Main.storyboard */,
 				E02C5D351E38CC25005B614B /* Assets.xcassets */,
 				E02C5D371E38CC25005B614B /* LaunchScreen.storyboard */,
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E02C5D341E38CC25005B614B /* PillCount.xcdatamodeld in Sources */,
-				E02C5D2E1E38CC25005B614B /* ViewController.swift in Sources */,
+				E02C5D2E1E38CC25005B614B /* PillCountViewController.swift in Sources */,
 				E02C5D2C1E38CC25005B614B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

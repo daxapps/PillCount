@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PillCountViewController.swift
 //  PillCount
 //
 //  Created by Jason Crawford on 1/25/17.
@@ -8,9 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PillCountViewController: UIViewController {
 
     @IBOutlet weak var datePickerTextField: UITextField!
+    @IBOutlet weak var amountPrescibedTextField: UITextField!
+    @IBOutlet weak var amountPatientHasTextField: UITextField!
+    @IBOutlet weak var daysUntilNextAppointmentLabel: UILabel!
+    @IBOutlet weak var amountPatientShouldHaveLabel: UILabel!
 
     let datePicker = UIDatePicker()
     
@@ -48,6 +52,9 @@ class ViewController: UIViewController {
         
         datePickerTextField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
+    }
+    
+    @IBAction func infoEnteredButtonPressed(_ sender: Any) {
     }
 
 }
