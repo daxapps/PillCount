@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class PillCountViewController: UIViewController, UITextViewDelegate {
 
@@ -36,7 +37,7 @@ class PillCountViewController: UIViewController, UITextViewDelegate {
         //self.amountPatientHasTextField.delegate = self
         createDatePicker()
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(PillCountViewController.updateDaysCounterLabel), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 60, target:self, selector: #selector(PillCountViewController.updateDaysCounterLabel), userInfo: nil, repeats: true)
         
         daysUntilApptTitleLabel.isHidden = true
         daysUntilNextAppointmentLabel.isHidden = true
@@ -91,9 +92,9 @@ class PillCountViewController: UIViewController, UITextViewDelegate {
     @IBAction func infoEnteredButtonPressed(_ sender: Any) {
         amountPatientShouldHaveLabel.text = "You Should Have \(calculateMedShouldHave()) films/pills."
         resignTextfield()
-        
-        whenNextApptLabel.isHidden = true
-        datePickerTextField.isHidden = true
+        whenNextApptLabel.text = "Your next appointment is"
+//        whenNextApptLabel.isHidden = true
+//        datePickerTextField.isHidden = true
         howManyEachDayLabel.isHidden = true
         amountPrescibedTextField.isHidden = true
         amountPatientHasLabel.isHidden = true
@@ -110,8 +111,14 @@ class PillCountViewController: UIViewController, UITextViewDelegate {
     
     func updateDaysCounterLabel() {
         let timeLeft = datePicker.date.timeIntervalSinceNow
-        daysUntilNextAppointmentLabel.text = timeLeft.time
         
+        if timeLeft > 0 {
+            daysUntilNextAppointmentLabel.text = timeLeft.time
+            print("update being called")
+            //timeLeft = timeLeft - 1
+        } else {
+            //print("Time for your appointment")
+        }
     }
     
     func calculateMedShouldHave() -> Double{
@@ -195,6 +202,6 @@ class PillCountViewController: UIViewController, UITextViewDelegate {
 
 extension TimeInterval {
     var time:String {
-        return String(format:"%02d", Int((self/86400) + 1))
+        return String(format:"%0d", Int((self/86400) + 1))
     }
 }
